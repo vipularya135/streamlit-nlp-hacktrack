@@ -138,12 +138,6 @@ st.sidebar.markdown("### 📊 Search Settings")
 search_method = st.sidebar.selectbox("Select Search Method", ["TF-IDF", "BM25", "Cosine Similarity"])
 search_query = st.sidebar.text_input("🔍 Search Hackathons")
 
-# Add Presenters' Names to Sidebar
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 👨‍💻 Presented by:")
-st.sidebar.markdown("**Vipul Arya & Suhas HM**")
-
-
 def search_hackathons(query, df, method):
     if query.strip() == "":
         return df  # Return full dataframe if search is empty
@@ -193,4 +187,25 @@ if st.sidebar.button("🔄 Reset Filters", key="reset"):
 # Refresh View with Filters
 st.write("### 🎟 All Hackathons")
 st.dataframe(filtered_df, use_container_width=True)
+
+# Add Presenters' Names to Sidebar with Styling
+st.sidebar.markdown("""
+    <style>
+        .presenter-card {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+    </style>
+    <div class="presenter-card">
+        👨‍💻 Presented by:<br>
+        <b>Vipul Arya & Suhas HM</b>
+    </div>
+""", unsafe_allow_html=True)
 
