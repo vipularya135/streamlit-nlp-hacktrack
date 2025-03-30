@@ -103,6 +103,13 @@ st.markdown("""
         .reset-button:hover {
             background: linear-gradient(to right, #ff5733, #ff2e63);
         }
+          .ti {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -187,3 +194,5 @@ if st.sidebar.button("🔄 Reset Filters", key="reset"):
 # Refresh View with Filters
 st.write("### 🎟 All Hackathons")
 st.dataframe(filtered_df, use_container_width=True)
+
+st.markdown('<div class="ti">Presented by → <b>VIPUL ARYA</b> and <b>SUHAS HM</b></div>', unsafe_allow_html=True)
