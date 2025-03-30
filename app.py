@@ -138,6 +138,12 @@ st.sidebar.markdown("### 📊 Search Settings")
 search_method = st.sidebar.selectbox("Select Search Method", ["TF-IDF", "BM25", "Cosine Similarity"])
 search_query = st.sidebar.text_input("🔍 Search Hackathons")
 
+# Add Presenters' Names to Sidebar
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 👨‍💻 Presented by:")
+st.sidebar.markdown("**Vipul Arya & Suhas HM**")
+
+
 def search_hackathons(query, df, method):
     if query.strip() == "":
         return df  # Return full dataframe if search is empty
