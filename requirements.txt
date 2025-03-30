@@ -2,4 +2,4 @@ streamlit
 pandas
 scikit-learn
 sqlite3
-rank-bm25
+rank_bm25
