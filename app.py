@@ -113,7 +113,7 @@ df = get_data()
 df_upcoming = filter_upcoming_hackathons(df)
 
 # Display first 5 upcoming hackathons
-st.write("### 🎯 5 Upcoming Hackathons")
+st.write("### 🎯 Upcoming Hackathons")
 df_upcoming_sorted = df_upcoming.sort_values(by='start_date', ascending=True).head(5)
 
 for _, row in df_upcoming_sorted.iterrows():
