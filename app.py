@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from rank_bm25 import BM25Okapi
 
 # Database path
-db_path = "C:\\Users\\krish\\Desktop\\sem6\\nlp\\hacktrack\\out\\example.db"
+db_path = "example.db"
 
 # Connect to SQLite database
 def get_data():
