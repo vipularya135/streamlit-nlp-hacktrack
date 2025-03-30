@@ -107,8 +107,6 @@ st.markdown("""
             font-size: 24px;
             font-weight: bold;
             color: #3498db;
-            text-align: center;
-            padding: 10px;
         }
     </style>
 """, unsafe_allow_html=True)
